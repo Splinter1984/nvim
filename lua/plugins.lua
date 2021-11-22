@@ -6,12 +6,16 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
     use 'junegunn/fzf.vim'
     use 'liuchengxu/vim-clap'
+    use 'prabirshrestha/vim-lsp'
+    use 'mattn/vim-lsp-settings'
+    use 'prabirshrestha/asyncomplete.vim'
+    use 'prabirshrestha/asyncomplete-lsp.vim'
     use 'glepnir/dashboard-nvim'
     use 'kyazdani42/nvim-web-devicons'
+    use 'jacoborus/tender.vim'
     use {
         'kyazdani42/nvim-tree.lua',
         requires = 'kyazdani42/nvim-web-devicons',
-        config = function() require'nvim-tree'.setup {} end
     }
     use 'nvim-lua/plenary.nvim'
     use 'voldikss/vim-floaterm'
@@ -23,3 +27,4 @@ return require('packer').startup(function()
     use 'nvim-lualine/lualine.nvim'
 
 end)
+
