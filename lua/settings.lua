@@ -6,7 +6,6 @@ cmd 'filetype plugin indent on'
 cmd 'set guifont=Hack\\ Nerd\\ Font\\ Mono:h9'
 cmd 'language en_US.utf-8'
 cmd 'set mouse=a'
-cmd 'set shell=C:\\WINDOWS\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe'
 
 vim.g.visualbell = true
 vim.bo.autoread = true
