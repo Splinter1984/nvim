@@ -62,6 +62,7 @@ return packer.startup(function(use)
 				'nvim-telescope/telescope.nvim',
 				requires= 'nvim-lua/plenary.nvim',	
     }
+    use 'prabirshrestha/asyncomplete.vim'
     use 'nvim-lua/completion-nvim'
     use 'tjdevries/nlua.nvim'
     use 'morhetz/gruvbox'
