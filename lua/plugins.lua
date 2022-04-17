@@ -50,7 +50,6 @@ return packer.startup(function(use)
     use 'prabirshrestha/asyncomplete-lsp.vim'
     use 'glepnir/dashboard-nvim'
     use 'kyazdani42/nvim-web-devicons'
-    use 'jacoborus/tender.vim'
     use {
         'kyazdani42/nvim-tree.lua',
         requires = 'kyazdani42/nvim-web-devicons',
@@ -59,11 +58,9 @@ return packer.startup(function(use)
     use 'neovim/nvim-lspconfig'
     use 'nvim-treesitter/nvim-treesitter'
     use {
-				'nvim-telescope/telescope.nvim',
-				requires= 'nvim-lua/plenary.nvim',	
+        'nvim-telescope/telescope.nvim',
+        requires= 'nvim-lua/plenary.nvim',	
     }
-    use 'prabirshrestha/asyncomplete.vim'
-    use 'nvim-lua/completion-nvim'
     use 'tjdevries/nlua.nvim'
     use 'morhetz/gruvbox'
     use 'nvim-lualine/lualine.nvim'
