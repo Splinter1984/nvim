@@ -43,27 +43,29 @@ return packer.startup(function(use)
 
     use 'wbthomason/packer.nvim'
     use 'junegunn/fzf.vim'
-    use 'liuchengxu/vim-clap'
-    use 'prabirshrestha/vim-lsp'
-    use 'mattn/vim-lsp-settings'
-    use 'prabirshrestha/asyncomplete.vim'
-    use 'prabirshrestha/asyncomplete-lsp.vim'
-    use 'glepnir/dashboard-nvim'
-    use 'kyazdani42/nvim-web-devicons'
-    use {
-        'kyazdani42/nvim-tree.lua',
-        requires = 'kyazdani42/nvim-web-devicons',
-    } 
-    use 'voldikss/vim-floaterm'
-    use 'neovim/nvim-lspconfig'
     use 'nvim-treesitter/nvim-treesitter'
     use {
         'nvim-telescope/telescope.nvim',
         requires= 'nvim-lua/plenary.nvim',	
     }
-    use 'tjdevries/nlua.nvim'
     use 'morhetz/gruvbox'
     use 'nvim-lualine/lualine.nvim'
+    use {
+        "hrsh7th/nvim-cmp",
+        requires = {
+            "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp",
+            'quangnguyen30192/cmp-nvim-ultisnips', 'hrsh7th/cmp-nvim-lua',
+            'octaltree/cmp-look', 'hrsh7th/cmp-path', 'hrsh7th/cmp-calc',
+            'f3fora/cmp-spell', 'hrsh7th/cmp-emoji'
+        }
+    }
+    use {
+        'neovim/nvim-lspconfig',
+        'williamboman/nvim-lsp-installer',
+    }
+    use 'L3MON4D3/LuaSnip'
+    use 'simrat39/rust-tools.nvim'
+    use 'kdheepak/lazygit.nvim'
 
     if PACKERD_BOOTSTRAP then
 	    require("packer").sync()
