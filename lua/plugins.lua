@@ -29,9 +29,9 @@ if not status_ok then
 	return
 end
 
-packer.init 
+packer.init
 {
-	display = 
+	display =
 	{
 		open_fn = function()
 			return require("packer.util").float {border = "rounded"}
@@ -43,6 +43,11 @@ return packer.startup(function(use)
 
     use 'wbthomason/packer.nvim'
     use 'junegunn/fzf.vim'
+    use 'kyazdani42/nvim-web-devicons'
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = 'kyazdani42/nvim-web-devicons',
+    }
     use 'nvim-treesitter/nvim-treesitter'
     use {
         'nvim-telescope/telescope.nvim',

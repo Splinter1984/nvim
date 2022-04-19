@@ -9,4 +9,6 @@ end
 
 map('n', '<C-Right>', ':tabnext<CR>', {noremap = true, silent = true})
 map('n', '<C-Left>', ':tabprevious<CR>', {noremap = true, silent = true})
+map('n', '<C-n>', ':tabnew<CR>', {noremap = true, silent = true})
+map('n', '<C-x>', ':tabclose<CR>', {noremap = true, silent = true})
 map('n', '<Leader>cd', ':cd %:p:h<CR>:pwd<CR>', {noremap = false, silent = false})
