@@ -1,6 +1,7 @@
 local cmd = vim.cmd
+local opt = vim.opt
 
-vim.g.termguicolors = true
+opt.termguicolors = true
 cmd 'let g:gruvbox_contrast_dark = "soft"'
 cmd 'colorscheme gruvbox'
 

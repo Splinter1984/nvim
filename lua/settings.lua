@@ -1,35 +1,47 @@
+local opt = vim.opt
 local cmd = vim.cmd
+local fn = vim.fn
 
+vim.g.mapleader = ''
 cmd 'syntax enable'
-cmd 'filetype plugin indent on'
-cmd 'set guifont=Hack\\ Nerd\\ Font\\ Mono:h9'
-cmd 'language en_US.utf-8'
-cmd 'set mouse=a'
-cmd 'set shiftwidth=4'
-cmd 'set tabstop=4'
+opt.encoding = 'utf-8'
+opt.fileencoding = 'utf-8'
 
-vim.g.visualbell = true
-vim.bo.autoread = true
-vim.g.backspace = '2'
-
-vim.wo.cursorline = true
-vim.g.hlsearch = true
-vim.g.insearch = true
-vim.g.lazyredraw = true
-vim.g.magic = true
-vim.g.showmatch = true
-vim.g.autoread = true
-vim.g.wildmenu = true
-vim.g.expandtab = true
-vim.g.foldcolumn = '1'
-vim.g.noerrorbells = true
-vim.g.smartcase = true
-vim.g.smartindent = true
-vim.o.ignorecase = true
-vim.wo.number = true
-vim.g.shiftround = true
-vim.g.ruler = true
+opt.visualbell = true
+opt.autoread = true
+opt.backspace = '2'
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.mouse = 'a'
 
 
---cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
+opt.cursorline = true
+opt.hlsearch = true
+opt.lazyredraw = true
+opt.magic = true
+opt.showmatch = true
+opt.autoread = true
+opt.wildmenu = true
+opt.expandtab = true
+opt.foldcolumn = '1'
+opt.smartcase = true
+opt.smartindent = true
+opt.ignorecase = true
+opt.number = true
+opt.shiftround = true
+opt.ruler = true
 
+local backup_dir = fn.stdpath("cache") .. "/backup"
+local backup_stat = pcall(os.execute, "mkdir -p " .. backup_dir)
+if backup_stat then
+  opt.backupdir = backup_dir
+  opt.directory = backup_dir
+end
+
+local undo_dir = fn.stdpath("cache") .. "/undo"
+local undo_stat = pcall(os.execute, "mkdir -p " .. undo_dir)
+local has_persist = fn.has("persistent_undo")
+if undo_stat and has_persist == 1 then
+  opt.undofile = true
+  opt.undodir = undo_dir
+end
