@@ -40,6 +40,11 @@ M.config = function()
       initial_mode = "insert",
       layout_strategy = "flex",
     },
+    pickers = {
+        find_files = {
+            theme = "cursor",
+        }
+    },
   }
 end
 

@@ -81,7 +81,7 @@ return packer.startup(function(use)
             'nvim-lua/plenary.nvim'
         }
     }
-
+    
     if PACKERD_BOOTSTRAP then
 	    require("packer").sync()
     end
