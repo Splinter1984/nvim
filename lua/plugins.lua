@@ -71,6 +71,16 @@ return packer.startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use 'simrat39/rust-tools.nvim'
     use 'kdheepak/lazygit.nvim'
+    use {
+        "folke/trouble.nvim",
+        requires = "kyazdani42/nvim-web-devicons",
+    }
+    use {
+        'tanvirtin/vgit.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        }
+    }
 
     if PACKERD_BOOTSTRAP then
 	    require("packer").sync()

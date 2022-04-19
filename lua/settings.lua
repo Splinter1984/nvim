@@ -7,6 +7,7 @@ cmd 'syntax enable'
 opt.encoding = 'utf-8'
 opt.fileencoding = 'utf-8'
 
+opt.shortmess = 'I'
 opt.visualbell = true
 opt.autoread = true
 opt.backspace = '2'
