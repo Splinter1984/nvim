@@ -1,6 +1,5 @@
 local opt = vim.opt
 local cmd = vim.cmd
-local fn = vim.fn
 
 vim.g.mapleader = ''
 cmd 'syntax enable'
@@ -14,7 +13,8 @@ opt.backspace = '2'
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.mouse = 'a'
-
+opt.colorcolumn = '80'
+opt.numberwidth = 4
 
 opt.cursorline = true
 opt.hlsearch = true
@@ -31,7 +31,7 @@ opt.ignorecase = true
 opt.number = true
 opt.shiftround = true
 opt.ruler = true
-
+--[[
 local backup_dir = fn.stdpath("cache") .. "/backup"
 local backup_stat = pcall(os.execute, "mkdir -p " .. backup_dir)
 if backup_stat then
@@ -46,3 +46,4 @@ if undo_stat and has_persist == 1 then
   opt.undofile = true
   opt.undodir = undo_dir
 end
+]]--
