@@ -75,6 +75,82 @@ function M.setup()
             end,
         }
 
+        -- Lualine
+        use {
+            'nvim-lualine/lualine.nvim',
+            event = "VimEnter",
+            config = function()
+                require 'config.lualine'.setup()
+            end,
+            requires = {
+                'nvim-web-devicons'
+            },
+        }
+
+        -- Treesitter
+        use {
+            "nvim-treesitter/nvim-treesitter",
+            run = ":TSUpdate",
+            config = function()
+                require("config.treesitter").setup()
+            end,
+        }
+
+        --  NvimGps
+        use {
+            "SmiteshP/nvim-gps",
+            module = "nvim-gps",
+            config = function()
+                require 'nvim-gps'.setup()
+            end,
+            requires = {
+                "nvim-treesitter/nvim-treesitter"
+            },
+        }
+
+        -- FZF Lua
+        use {
+            "ibhagwan/fzf-lua",
+            event = "BufEnter",
+            requires = { "kyazdani42/nvim-web-devicons" },
+        }
+
+        -- nvim-tree
+        use {
+            "kyazdani42/nvim-tree.lua",
+            requires = {
+                "kyazdani42/nvim-web-devicons",
+            },
+            cmd = { "NvimTreeToggle", "NvimTreeClose" },
+            config = function()
+                require("config.nvimtree").setup()
+            end,
+        }
+
+        -- Buffer line
+        use {
+            "akinsho/nvim-bufferline.lua",
+            event = "BufReadPre",
+            wants = "nvim-web-devicons",
+            config = function()
+                require("config.bufferline").setup()
+            end,
+        }
+
+        -- User interface
+        use {
+            "stevearc/dressing.nvim",
+            event = "BufEnter",
+            config = function()
+                require("dressing").setup {
+                    select = {
+                        backend = { "telescope", "fzf", "builtin" },
+                    },
+                }
+            end,
+        }
+        use { "nvim-telescope/telescope.nvim", module = "telescope", as = "telescope" }
+
         -- Bootstrap Neovim
         if packer_bootstrap then
             print "Restart Neovim required after installation!"
