@@ -1,7 +1,3 @@
 
---Require plugins
-require('plugins')
-require('settings')
-require('keymaps')
-require('config')
-
+require 'settings'.setup()
+require 'plugins'.setup()

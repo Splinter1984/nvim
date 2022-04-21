@@ -1,91 +1,92 @@
-local cmd = vim.cmd
-local fn = vim.fn
+local M = {}
 
---[[Auto install packer.nvim if not exists]]--
-local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-	PACKER_BOOTSTRAP = fn.system
-	{
-		"git",
-		"clone",
-		"--depth",
-		"1",
- 		"https://github.com/wbthomason/packer.nvim",
-		install_path,
-	}
-	print "Installing packer close and reopen neovim"
-	cmd [[packadd packer.nvim]]
+function M.setup()
+    -- Indicate first time installation
+    local packer_bootstrap = false
+  
+    -- packer.nvim configuration
+    local conf = {
+      profile = {
+        enable = true,
+        threshold = 0, -- the amount in ms that a plugins load time must be over for it to be included in the profile
+      },
+  
+      display = {
+        open_fn = function()
+          return require("packer.util").float { border = "rounded" }
+        end,
+      },
+    }
+  
+    -- Check if packer.nvim is installed
+    -- Run PackerCompile if there are changes in this file
+    local function packer_init()
+      local fn = vim.fn
+      local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+      if fn.empty(fn.glob(install_path)) > 0 then
+        packer_bootstrap = fn.system {
+          "git",
+          "clone",
+          "--depth",
+          "1",
+          "https://github.com/wbthomason/packer.nvim",
+          install_path,
+        }
+        vim.cmd [[packadd packer.nvim]]
+      end
+      vim.cmd "autocmd BufWritePost plugins.lua source <afile> | PackerCompile"
+    end
+  
+    local function plugins(use)
+        use 'wbthomason/packer.nvim'
+        -- Better icons
+        use {
+            "kyazdani42/nvim-web-devicons",
+            module = "nvim-web-devicons",
+            config = function()
+                require("nvim-web-devicons").setup { default = true }
+            end,
+        }
+
+         -- IndentLine
+        use {
+            "lukas-reineke/indent-blankline.nvim",
+            event = "BufReadPre",
+            config = function()
+                require("config.indentblankline").setup()
+            end,
+        }
+
+        -- Colorscheme
+        use {
+            'morhetz/gruvbox',
+            config = function()
+                require 'config.gruvbox'.setup()
+                vim.cmd 'colorscheme gruvbox'
+            end,
+        }
+
+        -- WhichKey
+         use {
+            "folke/which-key.nvim",
+            event = "VimEnter",
+            config = function()
+                require("config.whichkey").setup()
+            end,
+        }
+
+        -- Bootstrap Neovim
+        if packer_bootstrap then
+            print "Restart Neovim required after installation!"
+            require("packer").sync()
+        end   
+    end
+
+    packer_init()
+
+    local packer = require "packer"
+    packer.init(conf)
+    packer.startup(plugins)
 end
 
-cmd [[
-	augroup packer_user_config
-		autocmd!
-		autocmd BufWritePost plugins.lua source <afile> | PackerSync
-	augroup end
-]]
-
-local status_ok, packer = pcall(require, "packer")
-if not status_ok then
-	return
-end
-
-packer.init
-{
-	display =
-	{
-		open_fn = function()
-			return require("packer.util").float {border = "rounded"}
-		end,
-	},
-}
-
-return packer.startup(function(use)
-
-    use 'wbthomason/packer.nvim'
-    use 'junegunn/fzf.vim'
-    use 'kyazdani42/nvim-web-devicons'
-    use {
-        'kyazdani42/nvim-tree.lua',
-        requires = 'kyazdani42/nvim-web-devicons',
-    }
-    use 'nvim-treesitter/nvim-treesitter'
-    use {
-        'nvim-telescope/telescope.nvim',
-        requires= 'nvim-lua/plenary.nvim',
-    }
-    use 'morhetz/gruvbox'
-    use 'nvim-lualine/lualine.nvim'
-    use {
-        "hrsh7th/nvim-cmp",
-        requires = {
-            "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp",
-            'quangnguyen30192/cmp-nvim-ultisnips', 'hrsh7th/cmp-nvim-lua',
-            'octaltree/cmp-look', 'hrsh7th/cmp-path', 'hrsh7th/cmp-calc',
-            'f3fora/cmp-spell', 'hrsh7th/cmp-emoji'
-        }
-    }
-    use {
-        'neovim/nvim-lspconfig',
-        'williamboman/nvim-lsp-installer',
-    }
-    use 'L3MON4D3/LuaSnip'
-    use 'simrat39/rust-tools.nvim'
-    use 'kdheepak/lazygit.nvim'
-    use {
-        "folke/trouble.nvim",
-        requires = "kyazdani42/nvim-web-devicons",
-    }
-    use {
-        'tanvirtin/vgit.nvim',
-        requires = {
-            'nvim-lua/plenary.nvim'
-        }
-    }
-    use 'folke/which-key.nvim'
-    use 'glepnir/lspsaga.nvim'
-
-    --[[if PACKERD_BOOTSTRAP then
-	    require("packer").sync()
-    end]]--
-end)
-
+return M
