@@ -1,6 +1,6 @@
-$NVIM_DIR = "AppData\Local\nvim"
+$NVIM_DIR = "AppData\Local"
 
-Write-Output "This script will delete all files in $NVIM_DIR/nvim if they exist"
+Write-Output "This script will delete all files in $NVIM_DIR\nvim if they exist"
 $Ans = Read-Host "You want to continue? y-[yes] n-[no]"
 
 if ($Ans -eq "y")
