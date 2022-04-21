@@ -51,7 +51,7 @@ return packer.startup(function(use)
     use 'nvim-treesitter/nvim-treesitter'
     use {
         'nvim-telescope/telescope.nvim',
-        requires= 'nvim-lua/plenary.nvim',	
+        requires= 'nvim-lua/plenary.nvim',
     }
     use 'morhetz/gruvbox'
     use 'nvim-lualine/lualine.nvim'
@@ -81,9 +81,11 @@ return packer.startup(function(use)
             'nvim-lua/plenary.nvim'
         }
     }
-    
-    if PACKERD_BOOTSTRAP then
+    use 'folke/which-key.nvim'
+    use 'glepnir/lspsaga.nvim'
+
+    --[[if PACKERD_BOOTSTRAP then
 	    require("packer").sync()
-    end
+    end]]--
 end)
 

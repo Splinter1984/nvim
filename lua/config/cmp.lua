@@ -45,6 +45,7 @@ local kind_icons = {
 }
 
 cmp.setup {
+    scompletion = { completeopt = "menu,menuone,noinsert", keyword_length = 1 },
     snippet = {
         expand = function(args)
             luasnip.lsp_expand(args.body) -- For `luasnip` users.
@@ -108,11 +109,13 @@ cmp.setup {
                 luasnip = "[Snippet]",
                 buffer = "[Buffer]",
                 path = "[Path]",
+                treesitter = "[Treesitter]",
             })[entry.source.name]
             return vim_item
         end,
     },
     sources = {
+        { name = "treesitter" },
         { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "buffer" },

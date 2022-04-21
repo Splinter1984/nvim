@@ -9,4 +9,7 @@ require 'config.rust_tools'
 require 'config.trouble'
 require 'config.vgit'
 require 'config.lsp_installer'
+require 'config.which_key'
+require 'config.treesitter'
+require 'config.lsp_saga'
 
