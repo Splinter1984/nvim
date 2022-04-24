@@ -207,6 +207,13 @@ function M.setup()
                 'ray-x/lsp_signature.nvim',
             },
         }
+        
+        use {
+            "mvllow/modes.nvim",
+            config = function()
+                require 'modes'.setup() 
+            end
+        }
 
         -- Bootstrap Neovim
         if packer_bootstrap then
