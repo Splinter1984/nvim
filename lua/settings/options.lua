@@ -31,3 +31,7 @@ opt.ignorecase = true
 opt.number = true
 opt.shiftround = true
 opt.ruler = true
+
+opt.updatetime = 300
+opt.incsearch = false
+opt.signcolumn = 'yes'

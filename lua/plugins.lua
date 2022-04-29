@@ -207,12 +207,24 @@ function M.setup()
                 'ray-x/lsp_signature.nvim',
             },
         }
-
+            
+        -- Modes
         use {
             "mvllow/modes.nvim",
             config = function()
                 require 'modes'.setup()
             end
+        }
+
+        -- VGit
+        use {
+            'tanvirtin/vgit.nvim',
+            config = function()
+                require 'config.vgit'.setup()
+            end,
+            requires = {
+                'nvim-lua/plenary.nvim',
+            },
         }
 
         -- Bootstrap Neovim
