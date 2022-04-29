@@ -1,6 +1,6 @@
 local M = {}
 
-local opts = {noremap = true, silent = true}
+local opts = { noremap = true, silent = true }
 
 M.config = function()
     local actions = require 'telescope.actions'
@@ -12,26 +12,26 @@ M.config = function()
             sorting_strategy = 'ascending',
             winblend = 0,
             mappings = {
-            i = {
-                ["<C-d>"] = actions.close,
-                ["<Esc>"] = actions.close,
-                ["<C-j>"] = actions.move_selection_next,
-                ["<C-k>"] = actions.move_selection_previous,
-                ["<C-b>"] = actions.preview_scrolling_up,
-                ["<C-f>"] = actions.preview_scrolling_down,
-                ["<C-s>"] = actions.select_vertical,
-                ["<C-i>"] = actions.select_horizontal,
-            },
-            n = {
-                ["<C-d>"] = actions.close,
-                ["<Esc>"] = actions.close,
-                ["<C-j>"] = actions.move_selection_next,
-                ["<C-k>"] = actions.move_selection_previous,
-                ["<C-b>"] = actions.preview_scrolling_up,
-                ["<C-f>"] = actions.preview_scrolling_down,
-                ["<C-s>"] = actions.select_vertical,
-                ["<C-i>"] = actions.select_horizontal,
-            }
+                i = {
+                    ["<C-d>"] = actions.close,
+                    ["<Esc>"] = actions.close,
+                    ["<C-j>"] = actions.move_selection_next,
+                    ["<C-k>"] = actions.move_selection_previous,
+                    ["<C-b>"] = actions.preview_scrolling_up,
+                    ["<C-f>"] = actions.preview_scrolling_down,
+                    ["<C-s>"] = actions.select_vertical,
+                    ["<C-i>"] = actions.select_horizontal,
+                },
+                n = {
+                    ["<C-d>"] = actions.close,
+                    ["<Esc>"] = actions.close,
+                    ["<C-j>"] = actions.move_selection_next,
+                    ["<C-k>"] = actions.move_selection_previous,
+                    ["<C-b>"] = actions.preview_scrolling_up,
+                    ["<C-f>"] = actions.preview_scrolling_down,
+                    ["<C-s>"] = actions.select_vertical,
+                    ["<C-i>"] = actions.select_horizontal,
+                }
             },
             layout_config = {
                 height = 0.5,
@@ -49,4 +49,3 @@ M.config = function()
 end
 
 return M
-
