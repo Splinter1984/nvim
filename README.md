@@ -19,4 +19,4 @@ cd nvim/
 ./install.ps1
 ```
 
-Inside nvim call ```:PackerInstall``` & ```:PackerSync```i
+Inside nvim call ```:PackerInstall``` & ```:PackerSync```
