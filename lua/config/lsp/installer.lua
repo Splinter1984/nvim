@@ -12,12 +12,12 @@ function M.setup(servers, options)
                 local opts = vim.tbl_deep_extend('force', options, servers[server.name] or {})
 
                 server:setup(opts)
-        end)
+            end)
 
-        if not server:is_installed() then
-            utils.info("Installing " .. server.name)
-            server:install()
-        end
+            if not server:is_installed() then
+                utils.info("Installing " .. server.name)
+                server:install()
+            end
         else
             utils.error(server)
         end
@@ -25,4 +25,3 @@ function M.setup(servers, options)
 end
 
 return M
-
