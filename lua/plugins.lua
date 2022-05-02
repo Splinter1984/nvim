@@ -149,7 +149,13 @@ function M.setup()
                 }
             end,
         }
-        use { "nvim-telescope/telescope.nvim", module = "telescope", as = "telescope" }
+        
+        use { 
+            "nvim-telescope/telescope.nvim", 
+            config = function()
+                require("config.telescope").setup()
+            end,
+        }
 
         -- Lightspeed
         use {
