@@ -1,6 +1,6 @@
-### Introduction
+## Introduction
 My personal nvim configuration for Linux, Windows.
-### Install&Setup
+## Install&Setup
 Backup your current nvim configuratio
 * ```~/.config/nvim``` for ```Linux```
 * ```$HOME/AppData/Local/nvim``` for ```Windows```
