@@ -1,7 +1,7 @@
 ## Introduction
 My personal nvim configuration for Linux, Windows.
 
-<img src='https://github.com/Splinter1984/nvim/blob/master/preview.png' width=75%/>
+<img src='https://github.com/Splinter1984/nvim/blob/master/preview.png' width=77%/>
 
 ## Install&Setup
 Backup your current nvim configuratio
