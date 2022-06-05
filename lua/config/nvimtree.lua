@@ -55,12 +55,12 @@ function M.setup()
     }
 
     nvimtree.setup {
-        tree_ignore = { ".git", "node_modules", ".cache" },
-        hide_dotfiles = 0,
+        --tree_ignore = { ".git", "node_modules", ".cache" },
+        --hide_dotfiles = 0,
         disable_netrw = true,
         hijack_netrw = true,
         ignore_ft_on_setup = { "dashboard" },
-        auto_close = false,
+        --auto_close = false,
         open_on_tab = false,
         hijack_cursor = true,
         update_cwd = true,
@@ -78,7 +78,7 @@ function M.setup()
             }
         },
         view = {
-            allow_resize = true,
+            --allow_resize = true,
             side = "left",
             width = 25,
             mappings = {

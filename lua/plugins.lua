@@ -13,7 +13,9 @@ function M.setup()
 
         display = {
             open_fn = function()
-                return require("packer.util").float { border = "rounded" }
+                return require "packer.util".float { 
+                    border = "rounded" 
+                }
             end,
         },
     }
@@ -38,13 +40,17 @@ function M.setup()
     end
 
     local function plugins(use)
-        use 'wbthomason/packer.nvim'
+        -- Packer
+        use "wbthomason/packer.nvim"
+        
         -- Better icons
         use {
             "kyazdani42/nvim-web-devicons",
             module = "nvim-web-devicons",
             config = function()
-                require("nvim-web-devicons").setup { default = true }
+                require("nvim-web-devicons").setup { 
+                    default = true 
+                }
             end,
         }
 
@@ -59,10 +65,10 @@ function M.setup()
 
         -- Colorscheme
         use {
-            'morhetz/gruvbox',
+            "morhetz/gruvbox",
             config = function()
-                require 'config.gruvbox'.setup()
-                vim.cmd 'colorscheme gruvbox'
+                require("config.gruvbox").setup()
+                vim.cmd "colorscheme gruvbox"
             end,
         }
 
@@ -77,13 +83,13 @@ function M.setup()
 
         -- Lualine
         use {
-            'nvim-lualine/lualine.nvim',
+            "nvim-lualine/lualine.nvim",
             event = "VimEnter",
             config = function()
-                require 'config.lualine'.setup()
+                require("config.lualine").setup()
             end,
             requires = {
-                'nvim-web-devicons'
+                "nvim-web-devicons"
             },
         }
 
@@ -101,7 +107,7 @@ function M.setup()
             "SmiteshP/nvim-gps",
             module = "nvim-gps",
             config = function()
-                require 'nvim-gps'.setup()
+                require ("nvim-gps").setup()
             end,
             requires = {
                 "nvim-treesitter/nvim-treesitter"
@@ -112,7 +118,9 @@ function M.setup()
         use {
             "ibhagwan/fzf-lua",
             event = "BufEnter",
-            requires = { "kyazdani42/nvim-web-devicons" },
+            requires = { 
+                "kyazdani42/nvim-web-devicons" 
+            },
         }
 
         -- nvim-tree
@@ -121,9 +129,12 @@ function M.setup()
             requires = {
                 "kyazdani42/nvim-web-devicons",
             },
-            cmd = { "NvimTreeToggle", "NvimTreeClose" },
+            cmd = { 
+                "NvimTreeToggle", 
+                "NvimTreeClose" 
+            },
             config = function()
-                require("config.nvimtree").setup()
+                require("nvim-tree").setup()
             end,
         }
 
@@ -144,7 +155,11 @@ function M.setup()
             config = function()
                 require("dressing").setup {
                     select = {
-                        backend = { "telescope", "fzf", "builtin" },
+                        backend = { 
+                            "telescope", 
+                            "fzf", 
+                            "builtin" 
+                        },
                     },
                 }
             end,
@@ -160,9 +175,16 @@ function M.setup()
         -- Lightspeed
         use {
             "ggandor/lightspeed.nvim",
-            keys = { "s", "S", "f", "F", "t", "T" },
+            keys = { 
+                "s", 
+                "S", 
+                "f", 
+                "F", 
+                "t", 
+                "T" 
+            },
             config = function()
-                require("lightspeed").setup {}
+                require("lightspeed").setup()
             end,
         }
 
@@ -174,7 +196,9 @@ function M.setup()
             config = function()
                 require("config.cmp").setup()
             end,
-            wants = { "LuaSnip" },
+            wants = { 
+                "LuaSnip" 
+            },
             requires = {
                 "hrsh7th/cmp-buffer",
                 "hrsh7th/cmp-path",
@@ -204,13 +228,17 @@ function M.setup()
             "neovim/nvim-lspconfig",
             opt = true,
             event = "BufReadPre",
-            wants = { 'nvim-lsp-installer', 'lsp_signature.nvim', 'cmp-nvim-lsp' },
+            wants = { 
+                "nvim-lsp-installer", 
+                "lsp_signature.nvim", 
+                "cmp-nvim-lsp" 
+            },
             config = function()
-                require 'config.lsp'.setup()
+                require("config.lsp").setup()
             end,
             requires = {
-                'williamboman/nvim-lsp-installer',
-                'ray-x/lsp_signature.nvim',
+                "williamboman/nvim-lsp-installer",
+                "ray-x/lsp_signature.nvim",
             },
         }
             
@@ -218,25 +246,25 @@ function M.setup()
         use {
             "mvllow/modes.nvim",
             config = function()
-                require 'modes'.setup()
+                require "modes".setup()
             end
         }
 
         -- VGit
         use {
-            'tanvirtin/vgit.nvim',
+            "tanvirtin/vgit.nvim",
             config = function()
-                require 'config.vgit'.setup()
+                require "config.vgit".setup()
             end,
             requires = {
-                'nvim-lua/plenary.nvim',
+                "nvim-lua/plenary.nvim",
             },
         }
 
         -- Bootstrap Neovim
         if packer_bootstrap then
             print "Restart Neovim required after installation!"
-            require("packer").sync()
+            require "packer".sync()
         end
     end
 
