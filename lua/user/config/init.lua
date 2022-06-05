@@ -1,0 +1,7 @@
+require "user.config.cmp"
+require "user.config.lsp"
+require "user.config.treesitter"
+require "user.config.lualine"
+require "user.config.gps"
+require "user.config.vgit"
+require "user.config.nvim-tree"

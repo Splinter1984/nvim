@@ -1,3 +1,3 @@
-require 'utils'
-require 'settings'.setup()
-require 'plugins'.setup()
+require "user.plugins"
+require "user.config"
+require "user.settings"

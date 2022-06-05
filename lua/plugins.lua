@@ -72,15 +72,6 @@ function M.setup()
             end,
         }
 
-        -- WhichKey
-        use {
-            "folke/which-key.nvim",
-            event = "VimEnter",
-            config = function()
-                require("config.whichkey").setup()
-            end,
-        }
-
         -- Lualine
         use {
             "nvim-lualine/lualine.nvim",
@@ -100,27 +91,6 @@ function M.setup()
             config = function()
                 require("config.treesitter").setup()
             end,
-        }
-
-        --  NvimGps
-        use {
-            "SmiteshP/nvim-gps",
-            module = "nvim-gps",
-            config = function()
-                require ("nvim-gps").setup()
-            end,
-            requires = {
-                "nvim-treesitter/nvim-treesitter"
-            },
-        }
-
-        -- FZF Lua
-        use {
-            "ibhagwan/fzf-lua",
-            event = "BufEnter",
-            requires = { 
-                "kyazdani42/nvim-web-devicons" 
-            },
         }
 
         -- nvim-tree
@@ -147,44 +117,11 @@ function M.setup()
                 require("config.bufferline").setup()
             end,
         }
-
-        -- User interface
-        use {
-            "stevearc/dressing.nvim",
-            event = "BufEnter",
-            config = function()
-                require("dressing").setup {
-                    select = {
-                        backend = { 
-                            "telescope", 
-                            "fzf", 
-                            "builtin" 
-                        },
-                    },
-                }
-            end,
-        }
         
         use { 
             "nvim-telescope/telescope.nvim", 
             config = function()
                 require("config.telescope").setup()
-            end,
-        }
-
-        -- Lightspeed
-        use {
-            "ggandor/lightspeed.nvim",
-            keys = { 
-                "s", 
-                "S", 
-                "f", 
-                "F", 
-                "t", 
-                "T" 
-            },
-            config = function()
-                require("lightspeed").setup()
             end,
         }
 
@@ -239,25 +176,6 @@ function M.setup()
             requires = {
                 "williamboman/nvim-lsp-installer",
                 "ray-x/lsp_signature.nvim",
-            },
-        }
-            
-        -- Modes
-        use {
-            "mvllow/modes.nvim",
-            config = function()
-                require "modes".setup()
-            end
-        }
-
-        -- VGit
-        use {
-            "tanvirtin/vgit.nvim",
-            config = function()
-                require "config.vgit".setup()
-            end,
-            requires = {
-                "nvim-lua/plenary.nvim",
             },
         }
 
