@@ -80,6 +80,9 @@ return packer.startup(function(use)
         requires = {"kyazdani42/nvim-web-devicons"}
     }
 
+    -- indentlie
+    use "lukas-reineke/indent-blankline.nvim"
+
     -- vGit
     use {
         'tanvirtin/vgit.nvim',
