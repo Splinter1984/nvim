@@ -77,7 +77,7 @@ return packer.startup(function(use)
     -- nvim-tree
     use {
         "kyazdani42/nvim-tree.lua",
-        requires = {"kyazdani42/nvim-web-devicons"}
+        requires = {"kyazdani42/nvim-web-devicons"},
     }
 
     -- indentlie
@@ -87,6 +87,19 @@ return packer.startup(function(use)
     use {
         'tanvirtin/vgit.nvim',
         requires = {'nvim-lua/plenary.nvim'}
+    }
+
+    -- buffer-line
+    use {
+        'akinsho/bufferline.nvim', 
+        tag = "v2.*", 
+        requires = 'kyazdani42/nvim-web-devicons'
+    }
+    
+    -- Telescope
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
     }
 
     -- LSP

@@ -21,7 +21,7 @@ vim.g.maplocalleader = " "
 --   visual_mode = "v",
 --   visual_block_mode = "x",
 --   term_mode = "t",
---   command_mode = "c",
+    --   command_mode = "c",
 
 -- Normal --
 -- Better window navigation
@@ -52,8 +52,8 @@ keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+keymap("v", "<C-A>", ":tabprevious", opts)
+keymap("v", "<C-.>", ":tabnext", opts)
 
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)

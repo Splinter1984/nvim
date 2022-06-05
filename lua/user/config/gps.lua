@@ -1,9 +1,9 @@
-local cmp_status_ok, cmp = pcall(require, "nvim-gps")
+local cmp_status_ok, nvim_gps = pcall(require, "nvim-gps")
 if not cmp_status_ok then
     return
 end
 
-require("nvim-gps").setup({
+nvim_gps.setup({
 
     disable_icons = false, -- Setting it to true will disable all icons
 
