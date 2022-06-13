@@ -14,54 +14,11 @@ local g = vim.g
 
 vim.o.termguicolors = true
 
---g.nvim_tree_add_trailing = 0
---g.nvim_tree_git_hl = 1
---g.nvim_tree_highlight_opened_files = 0
---g.nvim_tree_root_folder_modifier = table.concat {":t:gs?$?/..", string.rep(" ", 1000), "?:gs?^??"}
-
---[[g.nvim_tree_show_icons = {
-    folders = 1,
-    folder_arrows = 1,
-    files = 1,
-    git = 1
-}]]--
-
---[[g.nvim_tree_icons = {
-    default = "",
-    folder = {
-        arrow_open = "",
-        arrow_closed = "",
-        default = "",
-        empty = "", -- 
-        empty_open = "",
-        open = "",
-        symlink = "",
-        symlink_open = ""
-    },
-    symlink = "",
-    git = {
-        deleted = "",
-        ignored = "◌",
-        renamed = "➜",
-        staged = "✓",
-        unmerged = "",
-        unstaged = "✗",
-        untacked = "★"
-    },
-    lsp = {
-        error = " ",
-        warning = " ",
-        hint = " ",
-        info = " "
-    }
-}]]--
-
 nvim_tree.setup {
     disable_netrw = true,
     hijack_netrw = true,
     open_on_setup = false,
     ignore_ft_on_setup = {"startify", "dashboard", "alpha"},
-    --auto_close = true,
     open_on_tab = false,
     hijack_cursor = false,
     update_cwd = true,
@@ -125,7 +82,7 @@ nvim_tree.setup {
     renderer = {
         add_trailing = false,
         group_empty = false,
-        highlight_git = false,
+        highlight_git = true,
         full_name = false,
         highlight_opened_files = "none",
         root_folder_modifier = ":~",
@@ -173,6 +130,12 @@ nvim_tree.setup {
             },
           },
         },
-        special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
+        special_files = {
+            "Cargo.toml",
+            "Makefile",
+            "README.md",
+            "readme.md",
+            "CMakeLists.txt"
+        },
     },
 }
