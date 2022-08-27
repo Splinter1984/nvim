@@ -8,3 +8,4 @@ if ($Ans -eq "y") {
     New-Item -Path $NVIM_DIR -Name "nvim" -ItemType "directory"
     Copy-Item -Path "$(Get-Item .)\*" -Destination "$NVIM_DIR/nvim" -recurse -Force
 }
+

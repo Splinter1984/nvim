@@ -12,3 +12,4 @@ if [[ "$answer" == "y" ]]; then
     mkdir -p $NVIM_DIR
     stow --restow --target=$NVIM_DIR/ .
 fi
+

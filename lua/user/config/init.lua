@@ -1,4 +1,3 @@
-
 require "user.config.cmp"
 require "user.config.lsp"
 require "user.config.treesitter"
