@@ -1,7 +1,17 @@
-local status_ok, _ = pcall(require, "lspconfig")
+local status_ok, lsp = pcall(require, "lsp-zero")
 if not status_ok then
     return
 end
 
-require("user.config.lsp.lsp-installer")
-require("user.config.lsp.handlers").setup()
+-- use recommended settigns
+lsp.preset('recommended')
+
+-- lsp.ensure_installed({
+--     'cpp',
+--     'python',
+--     'lua',
+--     'cmake'
+-- })
+
+lsp.setup()
+
