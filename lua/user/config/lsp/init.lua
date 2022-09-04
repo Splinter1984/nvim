@@ -5,13 +5,5 @@ end
 
 -- use recommended settigns
 lsp.preset('recommended')
-
--- lsp.ensure_installed({
---     'cpp',
---     'python',
---     'lua',
---     'cmake'
--- })
-
 lsp.setup()
 
