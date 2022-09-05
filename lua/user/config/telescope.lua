@@ -1,3 +1,5 @@
+-- TODO: add check for require status
+
 require('telescope').setup{
   defaults = {
     -- Default configuration for telescope goes here:
