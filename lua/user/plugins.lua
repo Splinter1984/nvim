@@ -42,6 +42,7 @@ return packer.startup(function(use)
     use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
     -- Colorschemes
+    use "sainnhe/gruvbox-material"
     use "morhetz/gruvbox"
     
     use {
