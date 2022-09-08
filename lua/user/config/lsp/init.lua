@@ -6,5 +6,6 @@ end
 
 -- use recommended settigns
 lsp.preset('recommended')
+lsp.nvim_workspace()
 lsp.setup()
 
