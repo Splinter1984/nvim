@@ -1,6 +1,11 @@
 -- TODO: add check for require status
+local status_ok, telescope = pcall(require, "telescope")
+if not status_ok then
+    return
+end
 
-require('telescope').setup{
+
+telescope.setup{
   defaults = {
     -- Default configuration for telescope goes here:
     -- config_key = value,

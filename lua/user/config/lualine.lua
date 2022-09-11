@@ -5,7 +5,7 @@ end
 
 local gps = require 'nvim-gps'
 
-require'lualine'.setup {
+lualine.setup {
     options = {
         icons_enabled = true,
         theme = 'gruvbox',
@@ -52,3 +52,4 @@ require'lualine'.setup {
     tabline = {},
     extensions = {'fugitive'}
 }
+

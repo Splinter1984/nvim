@@ -24,3 +24,4 @@ nvim_gps.setup({
     -- indicator used when context hits depth limit
     depth_limit_indicator = ".."
 })
+

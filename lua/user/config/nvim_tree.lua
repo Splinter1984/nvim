@@ -10,8 +10,6 @@ end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
-local g = vim.g
-
 vim.o.termguicolors = true
 
 nvim_tree.setup {
@@ -126,6 +124,7 @@ nvim_tree.setup {
           },
         },
         special_files = {
+            ".gitignore",
             "Cargo.toml",
             "Makefile",
             "README.md",

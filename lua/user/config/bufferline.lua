@@ -73,3 +73,4 @@ bufferline.setup {
     sort_by = 'tabs'
   }
 }
+

@@ -3,7 +3,6 @@ if not status_ok then
     return
 end
 
-
 -- use recommended settigns
 lsp.preset('recommended')
 lsp.nvim_workspace()
