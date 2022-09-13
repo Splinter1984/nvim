@@ -5,7 +5,7 @@ end
 
 bufferline.setup {
   options = {
-    mode = "tabs", -- set to "tabs" to only show tabpages instead
+    mode = "buffers", -- set to "tabs" to only show tabpages instead
     numbers = "none",
     close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"
     right_mouse_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
@@ -73,3 +73,4 @@ bufferline.setup {
     sort_by = 'tabs'
   }
 }
+
