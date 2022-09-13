@@ -3,5 +3,9 @@ if not cmp_status_ok then
     return
 end
 
-fzf_lua.setup()
+fzf_lua.setup{
+    fzf_opts = {
+        ['--border'] = 'false'
+    } 
+}
 
