@@ -11,4 +11,5 @@ require "user.config.telescope"
 require "user.config.toggleterm"
 require "user.config.todo_comments"
 require "user.config.fzf-lua"
+require "user.config.nvim-ufo"
 

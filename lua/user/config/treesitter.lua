@@ -1,9 +1,10 @@
-local cmp_status_ok, cmp = pcall(require, "nvim-treesitter")
+local cmp_status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not cmp_status_ok then
     return
 end
 
-local configs = require("nvim-treesitter.configs")
+require('nvim-treesitter.install').compilers = { "clang" }
+
 configs.setup {
     ensure_installed = {"cpp", "bash", "rust", "lua", "python"},
     sync_install = false,
@@ -17,6 +18,10 @@ configs.setup {
     indent = {
         enable = true,
         disable = {"yaml"}
-    }
+    },
+    context_commentstring = {
+        enable = true,
+        enable_autocmd = false,
+    },
 }
 

@@ -126,3 +126,12 @@ cmp.setup {
         native_menu = false
     }
 }
+
+-- Set configuration for git
+cmp.setup.filetype("gitcommit", {
+  sources = cmp.config.sources({
+    { name = "cmp_git" }, -- You can specify the `cmp_git` source if you were installed it.
+  }, {
+    { name = "buffer" },
+  })
+})
