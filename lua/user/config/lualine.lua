@@ -26,6 +26,7 @@ lualine.setup {
             'diagnostics',
             sources = {'nvim_diagnostic', 'coc'}
         }},
+
         lualine_c = {{
             'filename',
             file_status = true
