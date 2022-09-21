@@ -49,6 +49,12 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 -- NvimTree
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 
+-- Telescope
+keymap("n", "<C-t>", ":Telescope<CR>", opts)
+
+-- FzfLua
+keymap("n", "<C-l>", ":FzfLua files<CR>", opts)
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
