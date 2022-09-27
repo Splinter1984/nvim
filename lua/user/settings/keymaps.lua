@@ -53,7 +53,7 @@ keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<C-t>", ":Telescope<CR>", opts)
 
 -- FzfLua
-keymap("n", "<C-l>", ":FzfLua files<CR>", opts)
+keymap("n", "<C-f>", ":FzfLua files<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
