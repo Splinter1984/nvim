@@ -163,6 +163,12 @@ return packer.startup(function(use)
         'kevinhwang91/nvim-ufo', 
         requires = 'kevinhwang91/promise-async'
     }
+
+    -- Notify
+    use {
+        'rcarriga/nvim-notify'
+    }
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
