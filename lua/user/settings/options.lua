@@ -33,7 +33,8 @@ local options = {
     scrolloff = 8, -- is one of my fav
     sidescrolloff = 8,
     guifont = "Droid Sans Mono:h14", -- the font used in graphical neovim applications
-    colorcolumn = '80'
+    colorcolumn = '80',
+    showcmd = true -- display pressed keys
 }
 
 vim.opt.shortmess:append "c"

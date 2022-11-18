@@ -21,7 +21,7 @@ vim.g.maplocalleader = " "
 --   visual_mode = "v",
 --   visual_block_mode = "x",
 --   term_mode = "t",
-    --   command_mode = "c",
+--   command_mode = "c",
 
 -- Normal --
 -- Better window navigation
