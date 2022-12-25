@@ -1,5 +1,5 @@
 ## Introduction
-My personal nvim configuration.
+My nvim setup.
 
 ## Installation
 ### Pre-requisites
