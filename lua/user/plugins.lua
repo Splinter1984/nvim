@@ -164,6 +164,11 @@ return packer.startup(function(use)
         requires = 'kevinhwang91/promise-async'
     }
 
+    use {
+        'nvim-orgmode/orgmode',
+        requires = "nvim-treesitter/nvim-treesitter"
+    }
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

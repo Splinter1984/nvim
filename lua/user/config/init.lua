@@ -12,4 +12,5 @@ require "user.config.toggleterm"
 require "user.config.todo_comments"
 require "user.config.fzf-lua"
 require "user.config.nvim-ufo"
+require "user.config.orgmode"
 
