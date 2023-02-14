@@ -1,7 +1,7 @@
 local opts = {
     cmd = {
-        'clangd',
-        '--header-insertion=never'
+        'clangd-11',
+        '--header-insertion=never',
     },
     single_file_support=true,
 }
