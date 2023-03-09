@@ -4,9 +4,16 @@ local g = vim.g
 opt.termguicolors = true
 opt.background = 'dark'
 
-g.gruvbox_contrast_dark = 'soft'
-g.gruvbox_invert_indent_guides = 1
-g.gruvbox_improved_warnings = 1
+pcall(
+  function()
+    g.gruvbox_contrast_dark = 'soft'
+    g.gruvbox_invert_indent_guides = 1
+    g.gruvbox_improved_warnings = 1
+  end
+)
+--g.gruvbox_contrast_dark = 'soft'
+--g.gruvbox_invert_indent_guides = 1
+--g.gruvbox_improved_warnings = 1
 --g.gruvbox_invert_indent_guides = 1
 --g.gruvbox_improved_strings = 1
 

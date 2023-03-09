@@ -3,7 +3,7 @@ local opts = {
         'clangd',
         '--header-insertion=never',
         '--background-index',
-        '--suggest-missing-include',
+--        '--suggest-missing-include',
     },
     filetypes = {'c', 'cpp'},
     single_file_support=true,
