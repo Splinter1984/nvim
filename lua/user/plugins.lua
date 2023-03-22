@@ -169,6 +169,22 @@ return packer.startup(function(use)
         requires = "nvim-treesitter/nvim-treesitter"
     }
 
+    -- nvim-dap
+    use {
+        'mfussenegger/nvim-dap'
+    }
+
+    -- nvim-dap-ui
+    use {
+        'rcarriga/nvim-dap-ui', 
+        requires = 'mfussenegger/nvim-dap' 
+    }
+
+    -- neodev
+    use {
+      'folke/neodev.nvim'
+    }
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
