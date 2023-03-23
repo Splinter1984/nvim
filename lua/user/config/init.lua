@@ -1,4 +1,4 @@
-require "user.config.cmp"
+--require "user.config.cmp"
 require "user.config.lsp"
 require "user.config.treesitter"
 require "user.config.lualine"
@@ -13,4 +13,3 @@ require "user.config.todo_comments"
 require "user.config.fzf-lua"
 require "user.config.nvim-ufo"
 require "user.config.orgmode"
-
