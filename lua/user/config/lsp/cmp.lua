@@ -47,6 +47,13 @@ local kind_icons = {
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
+local source_icons = {
+  nvim_lsp = "[LSP]",
+  luasnip = "[Snippet]",
+  buffer = "[Buffer]",
+  path = "[Path]"
+}
+
 return {
     view = {                                                        
       entries = {name = 'custom', selection_order = 'near_cursor' } 
@@ -61,17 +68,10 @@ return {
         max_width = 40,
         format = function(entry, vim_item)
             -- Kind icons
-            vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-            -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-            vim_item.menu = ({
-                nvim_lsp = "[LSP]",
-                luasnip = "[Snippet]",
-                buffer = "[Buffer]",
-                path = "[Path]"
-            })[entry.source.name]
-
+            local kind = vim_item.kind
+            vim_item.kind = (kind_icons[kind] or "?") .. " " .. kind
+            vim_item.menu = source_icons[entry.source.name]
             vim_item.abbr = vim_item.abbr:match("[^(]+")
-
             return vim_item
         end,
     },
