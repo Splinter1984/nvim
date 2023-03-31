@@ -55,6 +55,9 @@ keymap("n", "<C-t>", ":Telescope<CR>", opts)
 -- FzfLua
 keymap("n", "<C-f>", ":FzfLua files<CR>", opts)
 
+-- Telescope live_grep
+keymap("n", "<C-s>", ":Telescope live_grep<CR>", opts)
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
