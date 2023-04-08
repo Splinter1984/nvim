@@ -100,11 +100,20 @@ cmp.setup {
     }),
   },
   formatting = {
-    fields = { "abbr", "menu", "kind" },
+    fields = { "abbr", "kind", "menu" },
     max_width = 40,
     format = function(entry, vim_item)
+      --[[
+      function trim(text)
+        local max_width = 50
+        if text and text:len() > max_width then
+          text = text:sub(1, max_width) .. "..."
+        end
+      end
+      ]]--
       vim_item.kind = (kind_icons[vim_item.kind] or "?") .. " " .. vim_item.kind
       vim_item.menu = source_icons[entry.source.name]
+      --vim_item.abbr = trim(vim_item.abbr)
       vim_item.abbr = vim_item.abbr:match("[^(]+")
       return vim_item
     end,
@@ -114,6 +123,10 @@ cmp.setup {
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+  },
+  window = {
+    completion = cmp.config.window.bordered({border="shadow"}),
+    documentation = cmp.config.window.bordered({border="shadow"})
   },
   experimental = {
     ghost_text = false,
