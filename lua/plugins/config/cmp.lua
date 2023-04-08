@@ -100,7 +100,7 @@ cmp.setup {
     }),
   },
   formatting = {
-    fields = { "kind", "abbr", "menu" },
+    fields = { "abbr", "menu", "kind" },
     max_width = 40,
     format = function(entry, vim_item)
       vim_item.kind = (kind_icons[vim_item.kind] or "?") .. " " .. vim_item.kind
@@ -114,10 +114,6 @@ cmp.setup {
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
-  },
-  confirm_opts = {
-    behavior = cmp.ConfirmBehavior.Replace,
-    select = false,
   },
   experimental = {
     ghost_text = false,
