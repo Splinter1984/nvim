@@ -13,7 +13,7 @@ if not ok then
     return
 end
 
-local ok, _ = pcall(vim.cmd.colorscheme, colorscheme)
-if not ok then
+local scheme_ok, _ = pcall(vim.cmd.colorscheme, colorscheme)
+if not scheme_ok then
     return
 end
