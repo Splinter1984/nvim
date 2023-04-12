@@ -23,14 +23,14 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-Up>", "<cmd>resize -2<CR>", opts)
+keymap("n", "<C-Down>", "<cmd>resize +2<CR>", opts)
+keymap("n", "<C-Left>", "<cmd>vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", "<cmd>vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-l>", "<cmd>bnext<CR>", opts)
+keymap("n", "<S-h>", "<cmd>bprevious<CR>", opts)
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
@@ -47,3 +47,6 @@ keymap("i", "jk", "<ESC>", opts)
 
 -- Fzf-lua --
 keymap("n", "\\", "<cmd>FzfLua<CR>", opts)
+keymap("n", "<C-f>", "<cmd>FzfLua files<CR>", opts)
+keymap("n", "<C-g>", "<cmd>FzfLua live_grep<CR>", opts)
+
