@@ -49,4 +49,5 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("n", "\\", "<cmd>FzfLua<CR>", opts)
 keymap("n", "<C-f>", "<cmd>FzfLua files<CR>", opts)
 keymap("n", "<C-g>", "<cmd>FzfLua live_grep<CR>", opts)
-
+keymap("n", "<C-c>", "<cmd>FzfLua lgrep_curbuf<CR>", opts)
+keymap("n", "<C-b>", "<cmd>FzfLua buffers<CR>", opts)
