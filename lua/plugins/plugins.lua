@@ -52,7 +52,8 @@ return packer.startup(function(use)
     use { "lewis6991/gitsigns.nvim" }
 
     -- [[ Fzf-lua ]] --
-    use { "ibhagwan/fzf-lua" }
+    -- TODO: replace by `main` on stable version.
+    use { "ibhagwan/fzf-lua", commit="04d5a528a4159901607c11d46a398f45db2ed43f" }
 
     -- [[ Cmp ]]
     use { "hrsh7th/nvim-cmp" }
@@ -69,6 +70,10 @@ return packer.startup(function(use)
     use { "williamboman/mason-lspconfig.nvim" }
     use { "jose-elias-alvarez/null-ls.nvim" }
     --use { "RRethy/vim-illuminate" }
+    
+    -- [[ Todo comments ]] --
+    use { "folke/todo-comments.nvim" }
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end

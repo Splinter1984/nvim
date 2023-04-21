@@ -3,4 +3,9 @@ if not status_ok then
   return
 end
 
-fzf.setup {}
+fzf.setup {
+  winopts = {
+    border = 'single'
+  }
+}
+
