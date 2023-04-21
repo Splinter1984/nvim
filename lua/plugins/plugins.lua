@@ -70,7 +70,7 @@ return packer.startup(function(use)
     use { "williamboman/mason-lspconfig.nvim" }
     use { "jose-elias-alvarez/null-ls.nvim" }
     --use { "RRethy/vim-illuminate" }
-    
+
     -- [[ Todo comments ]] --
     use { "folke/todo-comments.nvim" }
 
