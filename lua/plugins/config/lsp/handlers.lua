@@ -12,10 +12,10 @@ M.capabilities = cmp_nvim_lsp.default_capabilities(M.capabilities)
 M.setup = function()
 	local signs = {
 
-		{ name = "DiagnosticSignError", text = "" },
-		{ name = "DiagnosticSignWarn", text = "" },
-		{ name = "DiagnosticSignHint", text = "" },
-		{ name = "DiagnosticSignInfo", text = "" },
+		{ name = "DiagnosticSignError", text = " " },
+		{ name = "DiagnosticSignWarn", text = " " },
+		{ name = "DiagnosticSignHint", text = " " },
+		{ name = "DiagnosticSignInfo", text = " " },
 	}
 
 	for _, sign in ipairs(signs) do
@@ -78,7 +78,7 @@ M.on_attach = function(client, bufnr)
 	if client.name == "lua_ls" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
-  
+
   lsp_keymaps(bufnr)
 
 end

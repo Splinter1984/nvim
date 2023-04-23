@@ -8,8 +8,8 @@ echo "You want to continue? y-[yes] n-[no]"
 read answer
 
 if [[ "$answer" == "y" ]]; then
-    rm -rf $NVIM_DIR/*
-    mkdir -p $NVIM_DIR
-    stow --restow --target=$NVIM_DIR/ .
+  rm -rf $NVIM_DIR/*
+  mkdir -p $NVIM_DIR
+  stow --restow --target=$NVIM_DIR/ .
 fi
 

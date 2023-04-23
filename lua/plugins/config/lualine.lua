@@ -8,12 +8,9 @@ local hide_in_width = function()
 end
 
 local diagnostics = {
-  "diagnostics",
-  sources = { "nvim_diagnostic" },
-  sections = { "error", "warn" },
-  symbols = { error = " ", warn = " " },
-  colored = false,
-  always_visible = true,
+  "diagnostics", 
+  sources = { "nvim_diagnostic" }, 
+  symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' } 
 }
 
 local diff = {
@@ -25,7 +22,7 @@ local diff = {
 
 local filetype = {
   "filetype",
-  icons_enabled = false,
+  icons_enabled = true,
 }
 
 local location = {

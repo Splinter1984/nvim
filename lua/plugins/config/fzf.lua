@@ -5,6 +5,8 @@ end
 
 fzf.setup {
   winopts = {
-    width = 0.95
+    width = 0.95,
+    border = 'single'
   }
 }
+

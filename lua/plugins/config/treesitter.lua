@@ -1,4 +1,4 @@
-local status_ok, treesitter = pcall(require, "nvim-treesitter")
+local status_ok, _ = pcall(require, "nvim-treesitter")
 if not status_ok then
   return
 end
@@ -16,15 +16,16 @@ configs.setup {
 
   highlight = {
     enable = true, -- false will disable the whole extension
-    disable = { "css" }, -- list of language that will be disabled
+    disable = { }, -- list of language that will be disabled
   },
   autopairs = {
     enable = true,
   },
-  indent = { enable = true, disable = { "python", "css" } },
+  indent = { enable = true, disable = { "python" } },
 
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
   },
 }
+
