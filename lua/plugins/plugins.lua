@@ -69,6 +69,9 @@ return packer.startup(function(use)
     use { "williamboman/mason-lspconfig.nvim" }
     use { "jose-elias-alvarez/null-ls.nvim" }
     --use { "RRethy/vim-illuminate" }
+    
+    -- [[ Zen ]] --
+    use { "folke/zen-mode.nvim" }
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
