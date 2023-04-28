@@ -1,7 +1,7 @@
 local colorscheme = "gruvbox"
 
 vim.opt.termguicolors = true
-vim.opt.background = 'dark'
+--vim.opt.background = 'dark'
 local ok, _ = pcall(
     function()
         vim.g.gruvbox_contrast_dark = 'soft'
