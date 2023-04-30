@@ -8,9 +8,10 @@ local hide_in_width = function()
 end
 
 local diagnostics = {
-  "diagnostics", 
-  sources = { "nvim_diagnostic" }, 
-  symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' } 
+  "diagnostics",
+  sources = { "nvim_diagnostic", "nvim_lsp"},
+  symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' },
+  colored = false
 }
 
 local diff = {

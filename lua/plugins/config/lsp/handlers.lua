@@ -11,15 +11,14 @@ M.capabilities = cmp_nvim_lsp.default_capabilities(M.capabilities)
 
 M.setup = function()
 	local signs = {
-
-		{ name = "DiagnosticSignError", text = " " },
-		{ name = "DiagnosticSignWarn", text = " " },
-		{ name = "DiagnosticSignHint", text = " " },
-		{ name = "DiagnosticSignInfo", text = " " },
+		{ name = "DiagnosticSignError", text = "", hl = "GruvboxRedSign"},
+		{ name = "DiagnosticSignWarn", text = "" , hl = "GruvboxOrangeSign"},
+		{ name = "DiagnosticSignHint", text = "" , hl = "GruvboxBlueSign"},
+		{ name = "DiagnosticSignInfo", text = "" , hl = "GruvboxYellowSign"},
 	}
 
 	for _, sign in ipairs(signs) do
-		vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+		vim.fn.sign_define(sign.name, { text = sign.text, texthl = sign.hl })
 	end
 
 	local config = {
@@ -32,7 +31,6 @@ M.setup = function()
 		severity_sort = true,
 		float = {
 			focusable = true,
-			style = "minimal",
 			border = "none",
 			source = "always",
 			header = "",
@@ -43,11 +41,11 @@ M.setup = function()
 	vim.diagnostic.config(config)
 
 	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-		border = "rounded",
+		border = "single",
 	})
 
 	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-		border = "rounded",
+		border = "single",
 	})
 end
 

@@ -44,6 +44,7 @@ return packer.startup(function(use)
 
     -- [[ Colorscheme ]] --
     use { "morhetz/gruvbox" }
+    --use { "ellisonleao/gruvbox.nvim" }
 
     -- [[ Treesitter ]] -- 
     use { "nvim-treesitter/nvim-treesitter" }
@@ -69,8 +70,9 @@ return packer.startup(function(use)
     use { "williamboman/mason.nvim" }
     use { "williamboman/mason-lspconfig.nvim" }
     use { "jose-elias-alvarez/null-ls.nvim" }
+    --use { "folke/lsp-colors.nvim"}
     --use { "RRethy/vim-illuminate" }
-    
+
     -- [[ Zen ]] --
     use { "folke/zen-mode.nvim" }
 
