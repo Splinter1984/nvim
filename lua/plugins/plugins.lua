@@ -43,7 +43,7 @@ return packer.startup(function(use)
     use { "lukas-reineke/indent-blankline.nvim" }
 
     -- [[ Colorscheme ]] --
-    use { "morhetz/gruvbox" }
+    use { "Splinter1984/gruvbox" }
     --use { "ellisonleao/gruvbox.nvim" }
 
     -- [[ Treesitter ]] -- 

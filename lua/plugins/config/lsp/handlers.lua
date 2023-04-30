@@ -10,19 +10,25 @@ M.capabilities.textDocument.completion.completionItem.snippetSupport = true
 M.capabilities = cmp_nvim_lsp.default_capabilities(M.capabilities)
 
 M.setup = function()
+  local icons = {
+    ["ERROR"] = " ",
+    ["WARN"] = " ",
+    ["INFO"] = " ",
+    ["HINT"] = " ",
+  }
 	local signs = {
-		{ name = "DiagnosticSignError", text = "", hl = "GruvboxRedSign"},
-		{ name = "DiagnosticSignWarn", text = "" , hl = "GruvboxOrangeSign"},
-		{ name = "DiagnosticSignHint", text = "" , hl = "GruvboxBlueSign"},
-		{ name = "DiagnosticSignInfo", text = "" , hl = "GruvboxYellowSign"},
+		{ name = "DiagnosticSignError", text = icons["ERROR"]},
+	  { name = "DiagnosticSignWarn", text = icons["WARN"]},
+		{ name = "DiagnosticSignHint", text = icons["HINT"]},
+		{ name = "DiagnosticSignInfo", text = icons["INFO"]},
 	}
 
 	for _, sign in ipairs(signs) do
-		vim.fn.sign_define(sign.name, { text = sign.text, texthl = sign.hl })
+		vim.fn.sign_define(sign.name, { text = sign.text, texthl = sign.name })
 	end
 
 	local config = {
-		virtual_text = false, -- disable virtual text
+		virtual_text = false,
 		signs = {
 			active = signs, -- show signs
 		},
@@ -30,12 +36,21 @@ M.setup = function()
 		underline = true,
 		severity_sort = true,
 		float = {
-			focusable = true,
-			border = "none",
-			source = "always",
-			header = "",
-			prefix = "",
-		},
+      relative = "cursor",
+      close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+      focusable = false,
+      focus = false,
+      source = "if_many",
+      -- "single": A single line box.
+      -- "double": A double line box.
+      -- "rounded": Like "single", but with rounded corners "╭"
+      -- "solid": Adds padding by a single whitespace cell.
+      -- "shadow": A drop shadow effect by blending with the
+      -- "none": No border (default).
+      border = "shadow",
+      header = "",
+			prefix = ""
+    },
 	}
 
 	vim.diagnostic.config(config)

@@ -11,7 +11,7 @@ local diagnostics = {
   "diagnostics",
   sources = { "nvim_diagnostic", "nvim_lsp"},
   symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' },
-  colored = false
+  colored = true
 }
 
 local diff = {
