@@ -24,7 +24,7 @@ M.setup = function()
 	}
 
 	for _, sign in ipairs(signs) do
-		vim.fn.sign_define(sign.name, { text = sign.text, texthl = sign.name })
+		vim.fn.sign_define(sign.name, { text = sign.text, texthl = sign.name})
 	end
 
 	local config = {
@@ -49,7 +49,23 @@ M.setup = function()
       -- "none": No border (default).
       border = "shadow",
       header = "",
-			prefix = ""
+			prefix = function(diagnostic, i, total)
+        local icon, highlight
+        if diagnostic.severity == 1 then
+          icon = icons.ERROR
+          highlight = "DiagnosticError"
+        elseif diagnostic.severity == 2 then
+          icon = icons.WARN
+          highlight = "DiagnosticWarn"
+        elseif diagnostic.severity == 3 then
+          icon = icons.INFO
+          highlight = "DiagnosticInfo"
+        elseif diagnostic.severity == 4 then
+          icon = icons.HINT
+          highlight = "DiagnosticHint"
+        end
+        return i .. "/" .. total .. " " .. icon .. "  ", highlight
+      end,
     },
 	}
 
