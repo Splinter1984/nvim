@@ -10,28 +10,39 @@ M.capabilities.textDocument.completion.completionItem.snippetSupport = true
 M.capabilities = cmp_nvim_lsp.default_capabilities(M.capabilities)
 
 M.setup = function()
-  local icons = {
-    ["ERROR"] = " ",
-    ["WARN"] = " ",
-    ["INFO"] = " ",
-    ["HINT"] = " ",
-  }
+  local icons = { ["ERROR"] = " ", ["WARN"] = " ", ["INFO"] = " ", ["HINT"] = " " }
 	local signs = {
-		{ name = "DiagnosticSignError", text = icons["ERROR"]},
-	  { name = "DiagnosticSignWarn", text = icons["WARN"]},
-		{ name = "DiagnosticSignHint", text = icons["HINT"]},
-		{ name = "DiagnosticSignInfo", text = icons["INFO"]},
+		{ name = "DiagnosticSignError", text = icons.ERROR },
+	  { name = "DiagnosticSignWarn", text = icons.WARN },
+		{ name = "DiagnosticSignHint", text = icons.HINT },
+		{ name = "DiagnosticSignInfo", text = icons.INFO },
 	}
 
 	for _, sign in ipairs(signs) do
-		vim.fn.sign_define(sign.name, { text = sign.text, texthl = sign.name})
+		vim.fn.sign_define(sign.name, { text = sign.text, texthl = sign.name })
 	end
+
+  local get_prefix = function(diagnostic, i, total)
+    local icon, highlight
+    if diagnostic.severity == 1 then
+      icon = icons.ERROR
+      highlight = "DiagnosticError"
+    elseif diagnostic.severity == 2 then
+      icon = icons.WARN
+      highlight = "DiagnosticWarn"
+    elseif diagnostic.severity == 3 then
+      icon = icons.INFO
+      highlight = "DiagnosticInfo"
+    elseif diagnostic.severity == 4 then
+      icon = icons.HINT
+      highlight = "DiagnosticHint"
+    end
+    return i .. "/" .. total .. " " .. icon .. " ", highlight
+  end
 
 	local config = {
 		virtual_text = false,
-		signs = {
-			active = signs, -- show signs
-		},
+		signs = { active = signs },
 		update_in_insert = true,
 		underline = true,
 		severity_sort = true,
@@ -49,34 +60,18 @@ M.setup = function()
       -- "none": No border (default).
       border = "shadow",
       header = "",
-			prefix = function(diagnostic, i, total)
-        local icon, highlight
-        if diagnostic.severity == 1 then
-          icon = icons.ERROR
-          highlight = "DiagnosticError"
-        elseif diagnostic.severity == 2 then
-          icon = icons.WARN
-          highlight = "DiagnosticWarn"
-        elseif diagnostic.severity == 3 then
-          icon = icons.INFO
-          highlight = "DiagnosticInfo"
-        elseif diagnostic.severity == 4 then
-          icon = icons.HINT
-          highlight = "DiagnosticHint"
-        end
-        return i .. "/" .. total .. " " .. icon .. "  ", highlight
-      end,
+			prefix = get_prefix,
     },
 	}
 
 	vim.diagnostic.config(config)
 
 	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-		border = "single",
+		border = "shadow",
 	})
 
 	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-		border = "single",
+		border = "shadow",
 	})
 end
 

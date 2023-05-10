@@ -79,6 +79,9 @@ return packer.startup(function(use)
     -- [[ Todo comments ]] --
     use { "folke/todo-comments.nvim" }
 
+    -- [[ Diffview ]] -- 
+    use { 'sindrets/diffview.nvim' }
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
