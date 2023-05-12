@@ -5,8 +5,14 @@ end
 
 fzf.setup {
   winopts = {
-    width = 0.95,
+    --split = "belowright new",
+    preview = {
+      vertical = 'up:50%',
+      layout = 'vertical'
+    },
+    height = 0.90,
+    width = 0.99,
     border = 'single'
-  }
+  },
 }
 
