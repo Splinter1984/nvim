@@ -33,7 +33,8 @@ local location = {
 
 local filename = {
     "filename",
-    file_status = true
+    file_status = true,
+    path = 1
 }
 
 --[[
@@ -57,7 +58,7 @@ lualine.setup {
     lualine_a = { "mode" },
     lualine_b = { "branch", diagnostics },
     lualine_c = { filename, diff },
-    lualine_x = { "encoding", "fileformat", filetype },
+    lualine_x = { filetype },
     lualine_y = { "progress" },
     lualine_z = { location },
   },
