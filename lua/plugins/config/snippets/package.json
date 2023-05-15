@@ -1,0 +1,12 @@
+{
+  "name": "neovim-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "c",
+        "path": "./c.json"
+      }
+    ]
+  }
+}
+

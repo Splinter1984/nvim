@@ -1,0 +1,11 @@
+{
+  "Doxygen template": {
+    "prefix": "doxygen-brief",
+    "body": [
+      "/// @brief ${1:Description ...}",
+      "/// @methodology",
+      "/// - ${2:Logical steps ...}"
+    ],
+    "description": "Doxygen template to document a var/func/etc"
+  }
+}
