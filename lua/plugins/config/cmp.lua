@@ -17,7 +17,6 @@ local check_backspace = function()
   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 ]]--
-require("luasnip.")
 
 local kind_icons = {
   Text = "",
