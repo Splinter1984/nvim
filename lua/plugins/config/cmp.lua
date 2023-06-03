@@ -3,20 +3,20 @@ if not status_ok then
   return
 end
 
-local status_ok, luasnip = pcall(require, "luasnip")
-if not status_ok then
+local status_ok1, luasnip = pcall(require, "luasnip")
+if not status_ok1 then
   return
 end
 
 require("luasnip.loaders.from_vscode").load({
   paths = vim.fn.stdpath ("config") .. "/lua/plugins/config/snippets"
 })
-
+--[[
 local check_backspace = function()
   local col = vim.fn.col "." - 1
   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
-
+]]--
 require("luasnip.")
 
 local kind_icons = {

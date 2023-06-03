@@ -44,7 +44,10 @@ return packer.startup(function(use)
 
     -- [[ Colorscheme ]] --
     use { "Splinter1984/gruvbox" }
-    --use { "ellisonleao/gruvbox.nvim" }
+    -- "some interesting colorthemes"
+    --use { 'widatama/vim-phoenix' }
+    --use { 'kadekillary/skull-vim' }
+    --use {'huyvohcmc/atlas.vim'}
 
     -- [[ Treesitter ]] -- 
     use { "nvim-treesitter/nvim-treesitter" }
