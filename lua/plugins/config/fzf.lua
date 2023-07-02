@@ -7,6 +7,7 @@ fzf.setup {
   winopts = {
     --split = "belowright new",
     preview = {
+      hidden = 'hidden',
       vertical = 'up:50%',
       layout = 'vertical'
     },
