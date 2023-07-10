@@ -47,7 +47,7 @@ return packer.startup(function(use)
     -- "some interesting colorthemes"
     use { 'widatama/vim-phoenix' }
     use { 'kadekillary/skull-vim' }
-    use {'huyvohcmc/atlas.vim'}
+    use { 'huyvohcmc/atlas.vim' }
 
     -- [[ Treesitter ]] -- 
     use { "nvim-treesitter/nvim-treesitter" }

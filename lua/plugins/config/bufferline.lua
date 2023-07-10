@@ -7,7 +7,7 @@ bufferline.setup {
     options = {
         mode = "buffers",
         numbers = "none",
-        separator_style = "slant",
+        separator_style = "thin",
         sort_by = 'id', -- 'insert_after_current',
         always_show_bufferline = false,
         show_buffer_close_icons = false,
