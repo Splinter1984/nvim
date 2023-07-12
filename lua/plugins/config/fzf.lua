@@ -15,5 +15,17 @@ fzf.setup {
     width = 0.99,
     border = 'single'
   },
+  keymap = {
+    builtin = {
+      ["<C-i>"]        = "toggle-help",
+      ["<C-o>"]        = "toggle-fullscreen",
+      ["<C-p>"]        = "toggle-preview",
+      ["<C-[>"]        = "toggle-preview-ccw",
+      ["<C-]>"]        = "toggle-preview-cw",
+      ["<S-down>"]     = "preview-page-down",
+      ["<S-up>"]       = "preview-page-up",
+      ["<S-left>"]     = "preview-page-reset",
+    },
+  },
 }
 
