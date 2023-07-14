@@ -55,6 +55,9 @@ return packer.startup(function(use)
     -- [[ Gitsigns]] --
     use { "lewis6991/gitsigns.nvim" }
 
+    -- [[ NeoGit ]] --
+    use { 'NeogitOrg/neogit' }
+
     -- [[ Fzf-lua ]] --
     -- TODO: replace by `main` on stable version.
     use { "ibhagwan/fzf-lua", commit="04d5a528a4159901607c11d46a398f45db2ed43f" }
