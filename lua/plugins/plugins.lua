@@ -56,7 +56,8 @@ return packer.startup(function(use)
     use { "lewis6991/gitsigns.nvim" }
 
     -- [[ NeoGit ]] --
-    use { 'NeogitOrg/neogit' }
+    -- TODO: replace by `main` on stable version.
+    use { 'NeogitOrg/neogit', commit="36ffabb09974d3cdc3f3b31a639280da36a2b79f" }
 
     -- [[ Fzf-lua ]] --
     -- TODO: replace by `main` on stable version.
@@ -77,13 +78,13 @@ return packer.startup(function(use)
     use { "williamboman/mason-lspconfig.nvim" }
     use { "jose-elias-alvarez/null-ls.nvim" }
     --use { "folke/lsp-colors.nvim"}
-    --use { "RRethy/vim-illuminate" }
-
-    -- [[ Zen ]] --
-    use { "folke/zen-mode.nvim" }
+    --use { "RRethy/vim-illuminate" } 
 
     -- [[ Todo comments ]] --
     use { "folke/todo-comments.nvim" }
+
+    -- [[ Glance ]] --
+    use { 'dnlhc/glance.nvim' }
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()
