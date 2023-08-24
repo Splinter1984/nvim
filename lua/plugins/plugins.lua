@@ -50,14 +50,18 @@ return packer.startup(function(use)
     use { 'huyvohcmc/atlas.vim' }
 
     -- [[ Treesitter ]] -- 
-    use { "nvim-treesitter/nvim-treesitter" }
+    -- TODO: replace by `main` on stable version.
+    use { "nvim-treesitter/nvim-treesitter", commit="15129f6d70a4d7adc380abe57a64af93478f72e5" }
 
     -- [[ Gitsigns]] --
     use { "lewis6991/gitsigns.nvim" }
 
     -- [[ NeoGit ]] --
     -- TODO: replace by `main` on stable version.
-    use { 'NeogitOrg/neogit', commit="36ffabb09974d3cdc3f3b31a639280da36a2b79f" }
+    -- use { 'NeogitOrg/neogit', commit="36ffabb09974d3cdc3f3b31a639280da36a2b79f" }
+
+    -- [[ Lazygit ]]
+    use { "kdheepak/lazygit.nvim" }
 
     -- [[ Fzf-lua ]] --
     -- TODO: replace by `main` on stable version.
