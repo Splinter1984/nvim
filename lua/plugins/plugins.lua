@@ -48,13 +48,18 @@ return packer.startup(function(use)
     use { 'widatama/vim-phoenix' }
     use { 'kadekillary/skull-vim' }
     use { 'huyvohcmc/atlas.vim' }
+    use { 'stillwwater/vim-nebula' }
+    use { 'vv9k/vim-github-dark' }
 
     -- [[ Treesitter ]] -- 
     -- TODO: replace by `main` on stable version.
-    use { "nvim-treesitter/nvim-treesitter", commit="15129f6d70a4d7adc380abe57a64af93478f72e5" }
+    use { "nvim-treesitter/nvim-treesitter", commit="a6063b22c9e6d8660b82255d251c19d150725d9f" }
 
     -- [[ Gitsigns]] --
     use { "lewis6991/gitsigns.nvim" }
+
+    -- [[ Diffview ]] --
+    use { "sindrets/diffview.nvim" }
 
     -- [[ NeoGit ]] --
     -- TODO: replace by `main` on stable version.
@@ -89,6 +94,9 @@ return packer.startup(function(use)
 
     -- [[ Glance ]] --
     use { 'dnlhc/glance.nvim' }
+
+    -- [[ Coccinelle syntax]] -- 
+    use { 'ahf/cocci-syntax' }
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()
