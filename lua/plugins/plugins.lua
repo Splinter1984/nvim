@@ -40,7 +40,7 @@ return packer.startup(function(use)
     use { "nvim-lualine/lualine.nvim" }
     use { "akinsho/bufferline.nvim" }
     use { "kyazdani42/nvim-web-devicons" }
-    use { "lukas-reineke/indent-blankline.nvim" }
+    use { "lukas-reineke/indent-blankline.nvim", commit="9637670896b68805430e2f72cf5d16be5b97a22a" }
 
     -- [[ Colorscheme ]] --
     use { "Splinter1984/gruvbox" }
