@@ -9,8 +9,8 @@ Pre-requisites
 
 For Linux
 
-  ``git clone git@gthub.com:Splinter1984/nvim.git ~/.config/nvim --depth 1 ; nvim``
+  git clone git@gthub.com:Splinter1984/nvim.git ~/.config/nvim --depth 1 ; nvim
 
 For Windows
 
-  ``git clone git@gthub.com:Splinter1984/nvim.git $HOME\AppData\Local\nvim --depth 1 ; nvim``
+  git clone git@gthub.com:Splinter1984/nvim.git $HOME\AppData\Local\nvim --depth 1 ; nvim

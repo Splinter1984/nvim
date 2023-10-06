@@ -45,11 +45,11 @@ return packer.startup(function(use)
     -- [[ Colorscheme ]] --
     use { "Splinter1984/gruvbox" }
     -- "some interesting colorthemes"
-    use { 'widatama/vim-phoenix' }
+    --[[ use { 'widatama/vim-phoenix' }
     use { 'kadekillary/skull-vim' }
     use { 'huyvohcmc/atlas.vim' }
     use { 'stillwwater/vim-nebula' }
-    use { 'vv9k/vim-github-dark' }
+    use { 'vv9k/vim-github-dark' } ]] --
 
     -- [[ Treesitter ]] -- 
     -- TODO: replace by `main` on stable version.
@@ -64,9 +64,6 @@ return packer.startup(function(use)
     -- [[ NeoGit ]] --
     -- TODO: replace by `main` on stable version.
     -- use { 'NeogitOrg/neogit', commit="36ffabb09974d3cdc3f3b31a639280da36a2b79f" }
-
-    -- [[ Lazygit ]]
-    use { "kdheepak/lazygit.nvim" }
 
     -- [[ Fzf-lua ]] --
     -- TODO: replace by `main` on stable version.
@@ -86,17 +83,12 @@ return packer.startup(function(use)
     use { "williamboman/mason.nvim" }
     use { "williamboman/mason-lspconfig.nvim" }
     use { "jose-elias-alvarez/null-ls.nvim" }
-    --use { "folke/lsp-colors.nvim"}
-    --use { "RRethy/vim-illuminate" } 
 
     -- [[ Todo comments ]] --
     use { "folke/todo-comments.nvim" }
 
     -- [[ Glance ]] --
     use { 'dnlhc/glance.nvim' }
-
-    -- [[ Coccinelle syntax]] -- 
-    use { 'ahf/cocci-syntax' }
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()
