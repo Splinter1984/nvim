@@ -91,6 +91,9 @@ return packer.startup(function(use)
     -- [[ Glance ]] --
   use { 'dnlhc/glance.nvim' }
 
+    -- [[ Navic ]] --
+  use { "SmiteshP/nvim-navic" }
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

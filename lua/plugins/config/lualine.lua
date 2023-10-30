@@ -50,12 +50,19 @@ local filename = {
     newfile = '[New]',     -- Text to show for newly created file before first write
   }
 }
+
+--[[ local navic = {
+  'navic',
+  draw_empty = true,
+}
+]]--
+
 --[[
 local gps = {
     gps.get_location,
     cond = gps.is_available
 }
---]]--
+]]--
 
 lualine.setup {
   options = {
