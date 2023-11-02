@@ -51,6 +51,16 @@ local filename = {
   }
 }
 
+local function get_project()
+  return vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+end
+
+local project = {
+  get_project,
+  separator = { left = '', right = '' },
+  --separator = { left = '', right = '' },
+  color = { fg = '#282828', bg = '#83a598', 'bold' },
+}
 --[[ local navic = {
   'navic',
   draw_empty = true,
@@ -76,7 +86,7 @@ lualine.setup {
   },
   sections = {
     lualine_a = { "mode" },
-    lualine_b = { "branch", diagnostics },
+    lualine_b = { "branch", diagnostics, project },
     lualine_c = { filename, diff },
     lualine_x = { filetype },
     lualine_y = { "progress" },

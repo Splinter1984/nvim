@@ -37,7 +37,7 @@ return packer.startup(function(use)
   use { "nvim-lua/plenary.nvim" }
   use { "windwp/nvim-autopairs" }
   use { "nvim-lualine/lualine.nvim" }
-  use { "akinsho/bufferline.nvim" }
+  -- use { "akinsho/bufferline.nvim" }
   use { "kyazdani42/nvim-web-devicons" }
   use { "lukas-reineke/indent-blankline.nvim", commit="9637670896b68805430e2f72cf5d16be5b97a22a" }
 
