@@ -52,8 +52,3 @@ keymap("n", "<C-g>", "<cmd>FzfLua live_grep<CR>", opts)
 keymap("n", "<C-c>", "<cmd>FzfLua lgrep_curbuf<CR>", opts)
 keymap("n", "<C-b>", "<cmd>FzfLua buffers<CR>", opts)
 
--- Glance --
-keymap('n', 'gD', '<cmd>Glance definitions<CR>', opts)
-keymap('n', 'gR', '<cmd>Glance references<CR>', opts)
-keymap('n', 'gY', '<cmd>Glance type_definitions<CR>', opts)
-keymap('n', 'gM', '<cmd>Glance implementations<CR>', opts)

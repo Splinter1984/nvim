@@ -61,18 +61,6 @@ local project = {
   --separator = { left = '', right = '' },
   color = { fg = '#282828', bg = '#83a598', 'bold' },
 }
---[[ local navic = {
-  'navic',
-  draw_empty = true,
-}
-]]--
-
---[[
-local gps = {
-    gps.get_location,
-    cond = gps.is_available
-}
-]]--
 
 lualine.setup {
   options = {

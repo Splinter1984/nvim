@@ -59,13 +59,6 @@ return packer.startup(function(use)
     -- [[ Gitsigns]] --
   use { "lewis6991/gitsigns.nvim" }
 
-    -- [[ Diffview ]] --
-  use { "sindrets/diffview.nvim" }
-
-    -- [[ NeoGit ]] --
-  -- TODO: replace by `main` on stable version.
-  -- use { 'NeogitOrg/neogit', commit="36ffabb09974d3cdc3f3b31a639280da36a2b79f" }
-
     -- [[ Fzf-lua ]] --
   -- TODO: replace by `main` on stable version.
   use { "ibhagwan/fzf-lua", commit="04d5a528a4159901607c11d46a398f45db2ed43f" }
@@ -88,11 +81,8 @@ return packer.startup(function(use)
     -- [[ Todo comments ]] --
   use { "folke/todo-comments.nvim" }
 
-    -- [[ Glance ]] --
-  use { 'dnlhc/glance.nvim' }
-
-    -- [[ Navic ]] --
-  use { "SmiteshP/nvim-navic" }
+    -- [[ Fugitive ]] --
+  use { "tpope/vim-fugitive" }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
