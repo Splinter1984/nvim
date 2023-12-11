@@ -1,9 +1,10 @@
 local status_ok, bufferline = pcall(require, "bufferline")
 if not status_ok then
-  return
+  vim.api.nvim_err_writeln (bufferline)
+  return bufferline
 end
 
-bufferline.setup {
+bufferline.setup ({
   options = {
     mode = "buffers",
     numbers = "none",
@@ -14,4 +15,4 @@ bufferline.setup {
     show_close_icon = false,
     color_icons = true,
   }
-}
+})
