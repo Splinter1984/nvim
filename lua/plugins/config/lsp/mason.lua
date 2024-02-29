@@ -1,7 +1,9 @@
 local servers = {
   "clangd",
 	"lua_ls",
-  "jedi_language_server"
+  "jedi_language_server",
+  "rust_analyzer",
+  "gopls"
 }
 
 local settings = {
