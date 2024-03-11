@@ -45,15 +45,15 @@ return packer.startup(function(use)
     -- [[ Colorscheme ]] --
   use { "Splinter1984/gruvbox" }
     -- "some interesting colorthemes"
-  --[[ 
+  --[[
   use { 'widatama/vim-phoenix' }
   use { 'kadekillary/skull-vim' }
   use { 'huyvohcmc/atlas.vim' }
   use { 'stillwwater/vim-nebula' }
-  use { 'vv9k/vim-github-dark' } 
+  use { 'vv9k/vim-github-dark' }
   ]] --
 
-    -- [[ Treesitter ]] -- 
+    -- [[ Treesitter ]] --
   -- TODO: replace by `main` on stable version.
   use { "nvim-treesitter/nvim-treesitter", commit="a6063b22c9e6d8660b82255d251c19d150725d9f" }
 

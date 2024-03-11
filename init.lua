@@ -1,4 +1,4 @@
---[[      
+--[[
           .          .
         ';;,.        ::'
       ,:::;,,        :ccc,
@@ -11,10 +11,11 @@
      :oooo:     .::::llodd:
      .;ooo:       ;cclooo:.
        .;oc        'coo;.
-         .'         .,.   
-      author: @splinter1984 
+         .'         .,.
+      author: @splinter1984
 ]]--
 
 require "core"
 require "plugins"
 
+UTILS = require "utils"
