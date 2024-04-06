@@ -3,7 +3,6 @@ local servers = {
 	"lua_ls",
   "jedi_language_server",
   "rust_analyzer",
-  "gopls"
 }
 
 local settings = {
