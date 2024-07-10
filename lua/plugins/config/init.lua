@@ -2,7 +2,7 @@
 local modules =
 {
   "lualine",
-  "indentline",
+  "ibl",
   "gitsigns",
   "fzf",
   "lsp",

@@ -14,10 +14,10 @@ gitsigns.setup {
     untracked =    { text = "▎" },
   },
   signcolumn = true,
-  watch_gitdir = {
+  --[[watch_gitdir = {
     interval = 1000,
     folow_files = true,
-  },
+  },]]--
   attach_to_untracked = true,
   current_line_blame_opts = {
     virt_text = true,

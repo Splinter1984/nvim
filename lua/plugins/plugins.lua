@@ -40,10 +40,11 @@ return packer.startup(function(use)
   use { "nvim-lualine/lualine.nvim" }
   -- use { "akinsho/bufferline.nvim" }
   use { "kyazdani42/nvim-web-devicons" }
-  use { "lukas-reineke/indent-blankline.nvim", commit="9637670896b68805430e2f72cf5d16be5b97a22a" }
+  use { "Splinter1984/indent-blankline.nvim"}
 
     -- [[ Colorscheme ]] --
-  use { "Splinter1984/gruvbox" }
+  --use { "Splinter1984/gruvbox" }
+  use {"ellisonleao/gruvbox.nvim"}
     -- "some interesting colorthemes"
   --[[
   use { 'widatama/vim-phoenix' }
@@ -55,14 +56,15 @@ return packer.startup(function(use)
 
     -- [[ Treesitter ]] --
   -- TODO: replace by `main` on stable version.
-  use { "nvim-treesitter/nvim-treesitter", commit="a6063b22c9e6d8660b82255d251c19d150725d9f" }
+  use { "nvim-treesitter/nvim-treesitter"}
 
     -- [[ Gitsigns]] --
-  use { "lewis6991/gitsigns.nvim" }
+  -- NOTE: more stable commit="220446c8c86a280180d852efac60991eaf1a21d4"
+  use { "lewis6991/gitsigns.nvim"}
 
     -- [[ Fzf-lua ]] --
   -- TODO: replace by `main` on stable version.
-  use { "ibhagwan/fzf-lua", commit="04d5a528a4159901607c11d46a398f45db2ed43f" }
+  use { "ibhagwan/fzf-lua" }
 
     -- [[ Cmp ]]
   use { "hrsh7th/nvim-cmp" }
