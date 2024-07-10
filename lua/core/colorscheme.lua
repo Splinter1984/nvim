@@ -38,6 +38,11 @@ scheme.setup({
   contrast = "soft", -- can be "hard", "soft" or empty string
   palette_overrides = {},
   overrides = {
+    Operator = { link = "GruvboxFg1" },
+    Macro = { link = "GruvboxPurple" },
+    GitSignsChange = { link = "GruvboxBlue" },
+    DiagnosticHint = { link = "GruvboxGray" },
+    DiagnosticSignHint = { link = "GruvboxGray" },
     ["@variable"] = { link="GruvboxBlue" },
   },
   dim_inactive = false,

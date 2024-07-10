@@ -7,8 +7,10 @@ end
 ibl.setup({
   indent = {
     char = "┊",
+    smart_indent_cap = false,
   },
   scope = {
+    enabled = false,
     show_start = false,
     show_end = false,
   },
