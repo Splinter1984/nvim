@@ -87,6 +87,8 @@ return packer.startup(function(use)
     -- [[ Fugitive ]] --
   use { "tpope/vim-fugitive" }
 
+    -- [[ jinja2 ]] --
+  use { "HiPhish/jinja.vim" }
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

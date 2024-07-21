@@ -40,9 +40,11 @@ scheme.setup({
   overrides = {
     Operator = { link = "GruvboxFg1" },
     Macro = { link = "GruvboxPurple" },
-    GitSignsChange = { link = "GruvboxBlue" },
     DiagnosticHint = { link = "GruvboxGray" },
     DiagnosticSignHint = { link = "GruvboxGray" },
+    GitSignsAdd = { link = "GruvboxGreenSign" },
+    GitSignsChange = { link = "GruvboxBlueSign" },
+    GitSignsDelete = { link = "GruvboxRedSign" },
     ["@variable"] = { link="GruvboxBlue" },
   },
   dim_inactive = false,
