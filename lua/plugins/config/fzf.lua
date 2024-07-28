@@ -10,10 +10,12 @@ fzf.setup {
     preview = {
       hidden = 'hidden',
       vertical = 'up:50%',
-      layout = 'vertical'
+      layout = 'vertical',
+      title_pos = 'left'
     },
+    backdrop = 100,
     height = 0.90,
-    width = 0.99,
+    width = 0.80,
     border = 'single'
   },
   keymap = {
