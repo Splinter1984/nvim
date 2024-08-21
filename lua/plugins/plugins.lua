@@ -89,6 +89,8 @@ return packer.startup(function(use)
 
     -- [[ jinja2 ]] --
   use { "HiPhish/jinja.vim" }
+
+  use { "mmarchini/bpftrace.vim" }
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

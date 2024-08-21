@@ -11,7 +11,8 @@ fzf.setup {
       hidden = 'hidden',
       vertical = 'up:50%',
       layout = 'vertical',
-      title_pos = 'left'
+      title_pos = 'left',
+      wrap='wrap'
     },
     backdrop = 100,
     height = 0.90,
@@ -28,6 +29,11 @@ fzf.setup {
       ["<S-down>"]     = "preview-page-down",
       ["<S-up>"]       = "preview-page-up",
       ["<S-left>"]     = "preview-page-reset",
+    },
+  },
+  previewers = {
+    builtin = {
+      treesitter = { enable = true, disable = { '.c.j2' } }
     },
   },
 }
