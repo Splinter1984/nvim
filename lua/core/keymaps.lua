@@ -32,18 +32,8 @@ keymap("n", "<C-Right>", "<cmd>vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", "<cmd>bnext<CR>", opts)
 keymap("n", "<S-h>", "<cmd>bprevious<CR>", opts)
 
--- Clear highlights
-keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
-
--- Close buffers
-keymap("n", "<S-q>", "<cmd>bd<CR>", opts)
-
 -- Better paste
 keymap("v", "p", '"_dP', opts)
-
--- Insert --
--- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
 
 -- Fzf-lua --
 keymap("n", "\\", "<cmd>FzfLua<CR>", opts)

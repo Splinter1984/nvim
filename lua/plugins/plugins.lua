@@ -46,24 +46,15 @@ return packer.startup(function(use)
   --use { "Splinter1984/gruvbox" }
   use {"ellisonleao/gruvbox.nvim"}
     -- "some interesting colorthemes"
-  --[[
-  use { 'widatama/vim-phoenix' }
-  use { 'kadekillary/skull-vim' }
-  use { 'huyvohcmc/atlas.vim' }
-  use { 'stillwwater/vim-nebula' }
-  use { 'vv9k/vim-github-dark' }
-  ]] --
+  --use { "catppuccin/nvim", as = "catppuccin" }
 
     -- [[ Treesitter ]] --
-  -- TODO: replace by `main` on stable version.
   use { "nvim-treesitter/nvim-treesitter"}
 
     -- [[ Gitsigns]] --
-  -- NOTE: more stable commit="220446c8c86a280180d852efac60991eaf1a21d4"
   use { "lewis6991/gitsigns.nvim"}
 
     -- [[ Fzf-lua ]] --
-  -- TODO: replace by `main` on stable version.
   use { "ibhagwan/fzf-lua" }
 
     -- [[ Cmp ]]
