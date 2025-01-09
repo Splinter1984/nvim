@@ -33,7 +33,7 @@ fzf.setup {
   },
   previewers = {
     builtin = {
-      treesitter = { enable = true, disable = { '.c.j2' } }
+      --[[treesitter = { enable = true, disable = { '.c.j2' } }]]--
     },
   },
 }

@@ -40,13 +40,13 @@ return packer.startup(function(use)
   use { "nvim-lualine/lualine.nvim" }
   -- use { "akinsho/bufferline.nvim" }
   use { "kyazdani42/nvim-web-devicons" }
-  use { "Splinter1984/indent-blankline.nvim"}
+  use { "lukas-reineke/indent-blankline.nvim"}
 
     -- [[ Colorscheme ]] --
-  --use { "Splinter1984/gruvbox" }
-  use {"ellisonleao/gruvbox.nvim"}
+  -- TODO: create PR in original repo.
+  use { "Splinter1984/gruvbox.nvim", branch = "inverse_debug" }
     -- "some interesting colorthemes"
-  --use { "catppuccin/nvim", as = "catppuccin" }
+  use { "catppuccin/nvim", as = "catppuccin" }
 
     -- [[ Treesitter ]] --
   use { "nvim-treesitter/nvim-treesitter"}
@@ -70,7 +70,7 @@ return packer.startup(function(use)
   use { "neovim/nvim-lspconfig" }
   use { "williamboman/mason.nvim" }
   use { "williamboman/mason-lspconfig.nvim" }
-  use { "jose-elias-alvarez/null-ls.nvim" }
+  -- [[use { "jose-elias-alvarez/null-ls.nvim" }]]--
 
     -- [[ Todo comments ]] --
   use { "folke/todo-comments.nvim" }

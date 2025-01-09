@@ -6,4 +6,4 @@ end
 
 require "plugins.config.lsp.mason"
 require ("plugins.config.lsp.handlers").setup()
-require "plugins.config.lsp.null-ls"
+--require "plugins.config.lsp.null-ls"
