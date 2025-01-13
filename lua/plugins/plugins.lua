@@ -45,6 +45,7 @@ return packer.startup(function(use)
     -- [[ Colorscheme ]] --
   -- TODO: create PR in original repo.
   use { "Splinter1984/gruvbox.nvim", branch = "inverse_debug" }
+  --use { "~/forks/gruvbox.nvim" }
     -- "some interesting colorthemes"
   use { "catppuccin/nvim", as = "catppuccin" }
 
